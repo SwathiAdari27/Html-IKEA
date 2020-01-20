@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ikea-One</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwt17e1hmf6K1DE1_Z9tWUA5QuwBz5d5jM3tjt8sTgfW5-oBd0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header class="row ml-2">
+        <img src="logo.svg" alt="Ikea-logo" height="50" width="100">
+    </header>
+    <nav>
+        <ul class="row d-grid p-0 h-0" style="background-color:#0D57C6">
+            <li class="col-sm-3 py-2 text-center" style="border-right:0.5px solid rgba(255, 255, 255, 0.726)">
+                <a href="#" class="text-white">SOFT TOY HOME</a>
+            </li>
+            <li class="col-sm-2 py-2 text-center" style="border-right:0.5px solid rgba(255, 255, 255, 0.726)">
+                <a href="#" class="text-white">SUBMIT</a>
+            </li>
+            <li class="col-sm-2 py-2 text-center" style="border-right:0.5px solid rgba(255, 255, 255, 0.726)">
+                <a href="#" class="text-white">PRIZES</a>
+            </li>
+            <li class="col-sm-2 py-2 text-center" style="border-right:0.5px solid rgba(255, 255, 255, 0.726)">
+                <a href="#" class="text-white">RULES</a>
+            </li>
+            <li class="col-sm-3 py-2 text-center">
+                <a href="#" class="text-white">IKEA FOUNDATION</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="row">
+        <section class="col-sm-6 ml-2">
+            <h2 style="color:#EE6728">Submit Your Soft Toy Drawing</h2>
+            <p style="font-size: 12px">Welcome Comelius! To enter your child in our drawing competition,fill out the form below</p>
+            <svg height="50px">
+                <polygon points="0,0 120,0 150,22 120,40 0,40" style="fill:	#F7CC0C;stroke:	#F7CC0C;stroke-width:1" />
+                <text x="10" y="25">Artist Information</text>
+            </svg>
+            <form action="" name="userDetails">
+                <section class="row">
+                    <label for="name" class="col-md-3 px-4">
+                        <span class="float-md-right">First Name</span>
+                    </label>
+                    <input type="text" class="col-md-5" name="fname" id="name" onblur="NameTest()">
+                    <div style="color:red;display:none" class="col-md-4" id="nameError">Please enter your Name</div>
+                </section>
+                <section class="row">
+                    <label for="age" class="col-md-3 px-4">
+                        <span class="float-md-right">Age</span>
+                    </label>
+                    <input type="number" name="userAge" id="age" class="col-md-5" onblur="AgeTest()">
+                    <span style="color:red;display:none" class="col-md-4" id="AgeError">Please enter your Age</span>
+                </section>
+            </form>
+            <svg height="50px">
+                <polygon points="0,0 130,0 160,22 130,40 0,40" style="fill:#F7CC0C;stroke:#F7CC0C;stroke-width:1" />
+                <text x="10" y="25">Soft Toy Information</text>
+            </svg>
+            <form action="" name="toyDetails">
+                <section class="row">
+                    <label for="tName" class="col-md-3 px-4">
+                        <span class="float-md-right">Soft Toy Name</span>
+                    </label>
+                    <input type="text" id="tName" onblur="ToyTest()" class="col-md-5">
+                    <span style="color: red;display: none" id="toyError" class="col-md-4">Please enter a Toy Name</span>
+                </section>
+                <section class="row">
+                    <label for="description" class="col-md-3 px-4">
+                        <span class="float-md-right">Description</span>
+                    </label>
+                    <textarea name="descript" id="input" rows="5" class="col-md-5" max=length="100" onblur="LimitTest()" placeholder="Tell us a little something about your soft toy friend?What is her/his favorite food?Does she have a favourite sport?Does he like to play an instrument?500 characters limit."></textarea>
+                    <span style="color:red;display:none" id="limitError" class="col-md-4">Description should not exceed 100 characters</span>
+                </section>
+                <section class="row">
+                    <span class="col-md-3"></span>
+                    <small class="col-md-6">Total Characters:
+                        <b id="count">0</b> out of 100</small>
+                </section>
+                <section class="row">
+                    <span class="col-md-3"></span>
+                    <label for="upload" id="file-upload" class="col-md-5 text-center">UPLOAD YOUR DRAWING
+                        <i class="fa fa-play"></i>
+                    </label>
+                    <input type="file" id="upload">
+                </section>
+                <section class="row">
+                    <span class="col-md-3"></span>
+                    <small class="col-md-5">Must be JPG,PNG,XXX files size limit</small>
+                </section>
+            </form>
+        </section>
+    </section>
+    <section class="details">
+        <section class="row w-100 ml-0" style="background-color: #EEEEEE">
+            <ul class="col-sm-2">
+                <li>
+                    <b>IKEA Catalog & Brochures</b>
+                </li>
+                <li>Request</li>
+                <li>View Online</li>
+                <li>Buying Guides</li>
+            </ul>
+            <ul class="col-sm-2">
+                <li>
+                    <b>Need Help</b>
+                </li>
+                <li>FAQ</li>
+                <li>Contact Us</li>
+                <li>Return Policy</li>
+                <li>Children's Product Registration</li>
+            </ul>
+            <ul class="col-sm-2">
+                <li>
+                    <b>Delivery Information</b>
+                </li>
+                <li>Store Delivery</li>
+                <li>Online Delivery</li>
+                <li>Picking with Delivery</li>
+                <li>Delivery Terms & Conditions</li>
+            </ul>
+            <ul class="col-sm-2">
+                <li>
+                    <b>Helpful Links</b>
+                </li>
+                <li>Find an IKEA Store</li>
+                <li>All Products</li>
+                <li>Planning Tools</li>
+                <li>IKEA Food & Restaurant</li>
+                <li>Warranties</li>
+                <li>IKEA Services</li>
+                <li>IKEA Gift Card</li>
+            </ul>
+            <ul class="col-sm-2">
+                <li>
+                    <b>This is IKEA</b>
+                </li>
+                <li>The IKEA Concept</li>
+                <li>Democratic Design</li>
+                <li>About the IKEA Group</li>
+                <li>People & Planet</li>
+                <li>Press Room</li>
+                <li>Read our Materials</li>
+                <li>IKEA Foundation</li>
+            </ul>
+            <ul class="col-sm-2">
+                <li>
+                    <b>jobs at IKEA</b>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <footer class="bg-secondary w-100 text-white px-5 py-2">
+        &copy Inter IKEA Systems B.V. 1999-2016 | Privacy Policy
+    </footer>
+
+    <script type='text/javascript'>
+        $("#input").on("input", function () {
+            $("#count").text(this.value.length);
+        });
+
+        function NameTest() {
+            if (document.getElementById("name").value.length == 0)
+                document.getElementById("nameError").style.display = "";
+            else
+                document.getElementById("nameError").style.display = "none";
+        }
+        function AgeTest() {
+            if (document.getElementById("age").value.length == 0)
+                document.getElementById("AgeError").style.display = "";
+            else
+                document.getElementById("AgeError").style.display = "none";
+        }
+        function ToyTest() {
+            if (document.getElementById("tName").value.length < 10)
+                document.getElementById("toyError").style.display = "";
+            else
+                document.getElementById("toyError").style.display = "none"
+        }
+        function LimitTest() {
+            if (document.getElementById("input").value.length > 100)
+                document.getElementById("limitError").style.display = "";
+            else
+                document.getElementById("limitError").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
